@@ -1,7 +1,7 @@
 kind: Service
 metadata:
   labels:
-    app: solar-system
+    app: solar-system-app
   name: solar-system-service
 spec:
   ports:
@@ -9,5 +9,5 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: solar-system
+    app: solar-system-app
   type: NodePort
