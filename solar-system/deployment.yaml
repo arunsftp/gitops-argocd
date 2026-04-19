@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: solar-system
+    app: solar-system-app
   name: solar-system  
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: solar-system
+      app: solar-system-app
   strategy: {}
   template:
     metadata:
@@ -16,7 +16,7 @@ spec:
         app: solar-system
     spec:
       containers:
-        - name: solar-system
+        - name: solar-system-app
           image: siddharth67/solar-system:v3
           imagePullPolicy: Always
           ports:
